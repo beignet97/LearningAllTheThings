@@ -1,0 +1,1 @@
+﻿SELECT COUNT(*) FROM employees JOIN roles ON employees.role_id = roles.id GROUP BY role_id;
