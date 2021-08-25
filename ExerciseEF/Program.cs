@@ -12,12 +12,19 @@ namespace ExerciseEF
         {
             using (var db = new EmployeeContext())
             {
-                var populator = new Populate();
-                populator.Fill(db);
+                // var populator = new Populate();
+                // populator.Fill(db);
 
                 foreach (var employee in db.Employees)
                 {
                     Console.WriteLine(employee.Name);
+
+                    if (employee.LineManager != null)
+                    {
+                        Console.WriteLine(employee.LineManager.Name);
+                    }
+                    
+                    Console.WriteLine();
                 }
             }
 

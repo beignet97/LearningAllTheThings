@@ -19,5 +19,12 @@ namespace ExerciseEF
         public int EmployeeId { get; set; }
         public string Name { get; set; }
         public Employee LineManager { get; set; }
+        public Role Job { get; set; }
+    }
+
+    public class Role
+    {
+        public int RoleId { get; set; }
+        public string Name { get; set; }
     }
 }
