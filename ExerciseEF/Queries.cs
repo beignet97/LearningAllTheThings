@@ -26,5 +26,23 @@ namespace ExerciseEF
                 }
             }
         }
+
+        public void Managers()
+        {
+            using (var db = new EmployeeContext())
+            {
+                Console.WriteLine("The following employees are line managers:");
+
+                foreach (var employee in db.Employees)
+                {
+                    if (db.Employees.Any(person => employee.EmployeeId == person.LineManager.EmployeeId))
+                    {
+                        Console.WriteLine(employee.Name);
+                    }
+                }
+
+                Console.WriteLine();
+            }
+        }
     }
 }
