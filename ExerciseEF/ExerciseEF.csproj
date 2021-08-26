@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Queries.cs" />
     <Compile Include="Migrations\202108251535498_InitialCreate.cs" />
     <Compile Include="Migrations\202108251535498_InitialCreate.designer.cs">
       <DependentUpon>202108251535498_InitialCreate.cs</DependentUpon>
@@ -64,7 +65,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Populate.cs" />
-    <Compile Include="RoleQuery.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

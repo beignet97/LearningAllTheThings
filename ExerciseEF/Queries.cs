@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExerciseEF
 {
-    class RoleQuery
+    class Queries
     {
-        static void Main(string[] args)
+        public void EmployeesPerRole()
         {
             using (var db = new EmployeeContext())
             {
@@ -25,9 +25,6 @@ namespace ExerciseEF
                     Console.WriteLine();
                 }
             }
-
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
         }
     }
 }
