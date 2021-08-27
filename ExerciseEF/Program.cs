@@ -11,7 +11,7 @@ namespace ExerciseEF
         static void Main(string[] args)
         {
             var query = new Queries();
-            query.Managers();
+            query.ManagerUnderlings();
 
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();

@@ -44,5 +44,24 @@ namespace ExerciseEF
                 Console.WriteLine();
             }
         }
+
+        public void ManagerUnderlings()
+        {
+            using (var db = new EmployeeContext())
+            {
+                Console.WriteLine("Number of employees each line manager manages:");
+
+                foreach (var employee in db.Employees)
+                {
+                    if (db.Employees.Any(person => employee.EmployeeId == person.LineManager.EmployeeId))
+                    {
+                        var underlings = db.Employees.Where(person => person.LineManager.Name == employee.Name).Count();
+                        Console.WriteLine(employee.Name + " manages " + underlings + " employees");
+                    }
+                }
+
+                Console.WriteLine();
+            }
+        }
     }
 }
