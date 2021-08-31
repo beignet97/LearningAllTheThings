@@ -3,7 +3,13 @@
   "version": "0.0.0",
   "description": "vending-machine",
   "main": "server.js",
-  "author": {
-    "name": ""
+  "author": "",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1"
   }
 }
