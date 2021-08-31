@@ -1,0 +1,9 @@
+{
+  "name": "vending-machine",
+  "version": "0.0.0",
+  "description": "vending-machine",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
