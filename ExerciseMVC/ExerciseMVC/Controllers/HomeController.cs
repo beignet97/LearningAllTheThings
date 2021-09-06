@@ -9,21 +9,20 @@ namespace ExerciseMVC.Controllers
 {
     public class HomeController : Controller
     {
-        static IList<Task> taskList = new List<Task>
-        {
-            new Task() { TaskId = 1, TaskDescription = "Example task" }
-        };
+        private TaskDBContext db = new TaskDBContext();
+        static IList<Task> taskList = new List<Task> { };
 
         public ActionResult Index()
         {
-            return View(taskList.ToList());
+            return View(db.Tasks.ToList());
         }
 
         [HttpPost]
         public ActionResult Index(FormCollection values)
         {
             var newTask = new Task() { TaskId = taskList.Count + 1, TaskDescription = values["TaskDescription"] };
-            taskList.Add(newTask);
+            db.Tasks.Add(newTask);
+            db.SaveChanges();
 
             return RedirectToAction("Index");
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 
 namespace ExerciseMVC.Models
 {
@@ -9,5 +10,10 @@ namespace ExerciseMVC.Models
     {
         public int TaskId { get; set; }
         public string TaskDescription { get; set; }
+    }
+
+    public class TaskDBContext : DbContext
+    {
+        public DbSet<Task> Tasks { get; set; }
     }
 }
