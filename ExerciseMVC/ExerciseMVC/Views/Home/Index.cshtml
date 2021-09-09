@@ -11,6 +11,8 @@
         @foreach (var item in Model)
         {
             <p>Task @Html.DisplayFor(modelItem => item.TaskId): @Html.DisplayFor(modelItem => item.TaskDescription)</p>
+            <p>Due date: @Html.DisplayFor(modelItem => item.TaskDate)</p>
+            <p></p>
         }
     </div>
 </div>

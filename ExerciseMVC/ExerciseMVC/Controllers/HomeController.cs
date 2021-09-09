@@ -10,7 +10,6 @@ namespace ExerciseMVC.Controllers
     public class HomeController : Controller
     {
         private TaskDBContext db = new TaskDBContext();
-        static IList<Task> taskList = new List<Task> { };
 
         public ActionResult Index()
         {
@@ -20,7 +19,7 @@ namespace ExerciseMVC.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection values)
         {
-            var newTask = new Task() { TaskId = taskList.Count + 1, TaskDescription = values["TaskDescription"] };
+            var newTask = new Task() { TaskDescription = values["TaskDescription"] };
             db.Tasks.Add(newTask);
             db.SaveChanges();
 

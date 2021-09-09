@@ -10,6 +10,7 @@ namespace ExerciseMVC.Models
     {
         public int TaskId { get; set; }
         public string TaskDescription { get; set; }
+        public DateTime TaskDate { get; set; }
     }
 
     public class TaskDBContext : DbContext
