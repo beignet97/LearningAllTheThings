@@ -19,7 +19,7 @@ namespace ExerciseMVC.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection values)
         {
-            var newTask = new Task() { TaskDescription = values["TaskDescription"] };
+            var newTask = new Task() { TaskDescription = values["TaskDescription"], TaskDate = DateTime.Now };
             db.Tasks.Add(newTask);
             db.SaveChanges();
 
