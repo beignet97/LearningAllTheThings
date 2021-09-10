@@ -139,6 +139,10 @@
     <Compile Include="Migrations\202109091342555_AddTaskDate.designer.cs">
       <DependentUpon>202109091342555_AddTaskDate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109100936272_AddCategory.cs" />
+    <Compile Include="Migrations\202109100936272_AddCategory.designer.cs">
+      <DependentUpon>202109100936272_AddCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -202,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109091342555_AddTaskDate.resx">
       <DependentUpon>202109091342555_AddTaskDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109100936272_AddCategory.resx">
+      <DependentUpon>202109100936272_AddCategory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

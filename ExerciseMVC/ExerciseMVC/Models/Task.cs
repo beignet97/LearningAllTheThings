@@ -18,6 +18,15 @@ namespace ExerciseMVC.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime TaskDate { get; set; }
+        public Category TaskCategory { get; set; }
+    }
+
+    public enum Category
+    {
+        Chore,
+        Finance,
+        Planning,
+        Miscellaneous
     }
 
     public class TaskDBContext : DbContext
