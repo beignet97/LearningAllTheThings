@@ -14,7 +14,7 @@ namespace ExerciseMVC.Models
         [Display(Name = "Description")]
         public string TaskDescription { get; set; }
 
-        [Display(Name = "Due date")]
+        [Display(Name = "Date created")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime TaskDate { get; set; }

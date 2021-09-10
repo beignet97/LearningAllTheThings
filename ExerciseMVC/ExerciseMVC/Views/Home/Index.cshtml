@@ -1,4 +1,5 @@
-﻿@model IEnumerable<ExerciseMVC.Models.Task>
+﻿@using ExerciseMVC.Models
+@model IEnumerable<ExerciseMVC.Models.Task>
 
 @{
     ViewBag.Title = "To Do List";
@@ -22,11 +23,18 @@
     {
         @Html.AntiForgeryToken()
 
-        <div class="col-md-6">
+        <div class="col-md-4">
             @Html.TextBox("TaskDescription")
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-4">
+            @Html.DropDownList("TaskCategory",
+                                EnumHelper.GetSelectList(typeof(Category)),
+                                "Select category",
+                                new { @class = "form-control" })
+        </div>
+
+        <div class="col-md-4">
             <input type="submit" value="Add task" class="btn btn-default" />
         </div>
     }

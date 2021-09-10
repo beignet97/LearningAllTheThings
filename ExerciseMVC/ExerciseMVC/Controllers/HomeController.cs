@@ -19,7 +19,7 @@ namespace ExerciseMVC.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection values)
         {
-            var newTask = new Task() { TaskDescription = values["TaskDescription"], TaskDate = DateTime.Now };
+            var newTask = new Task() { TaskDescription = values["TaskDescription"], TaskDate = DateTime.Now, TaskCategory = (Category)Enum.Parse(typeof(Category), values["TaskCategory"]) };
             db.Tasks.Add(newTask);
             db.SaveChanges();
 
