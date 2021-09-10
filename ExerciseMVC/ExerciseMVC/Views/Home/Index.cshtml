@@ -1,0 +1,41 @@
+﻿@using ExerciseMVC.Models
+@model IEnumerable<ExerciseMVC.Models.Task>
+
+@{
+    ViewBag.Title = "To Do List";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>To Do List</h1>
+
+        @foreach (var item in Model)
+        {
+            <p>Task @Html.DisplayFor(modelItem => item.TaskId): @Html.DisplayFor(modelItem => item.TaskDescription)</p>
+            <p>Date created: @Html.DisplayFor(modelItem => item.TaskDate)</p>
+            <p>Category: @Html.DisplayFor(modelItem => item.TaskCategory)</p>
+        }
+    </div>
+</div>
+
+<div class="row">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-4">
+            @Html.TextBox("TaskDescription")
+        </div>
+
+        <div class="col-md-4">
+            @Html.DropDownList("TaskCategory",
+                                EnumHelper.GetSelectList(typeof(Category)),
+                                "Select category",
+                                new { @class = "form-control" })
+        </div>
+
+        <div class="col-md-4">
+            <input type="submit" value="Add task" class="btn btn-default" />
+        </div>
+    }
+</div>
