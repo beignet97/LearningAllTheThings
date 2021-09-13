@@ -9,8 +9,6 @@ namespace GameOfThrones.Controllers
 {
     public class HomeController : Controller
     {
-        private CastleContext db = new CastleContext();
-
         public ActionResult Index()
         {
             return View();
