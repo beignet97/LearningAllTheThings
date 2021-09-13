@@ -1,0 +1,17 @@
+﻿@model IEnumerable<GameOfThrones.Models.House>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Houses";
+}
+
+<h2>Houses</h2>
+<ul>
+    @foreach (var house in Model)
+    {
+        <li>@Html.DisplayFor(field => house.Name)</li>
+    }
+</ul>
