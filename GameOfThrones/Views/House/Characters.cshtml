@@ -1,0 +1,16 @@
+﻿@model IEnumerable<GameOfThrones.Models.Character>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Characters";
+}
+
+<h2>Characters</h2>
+
+@foreach (var character in Model)
+{
+    <p>@Html.DisplayFor(field => character.FirstName) @Html.DisplayFor(field => character.LastName) - Alive: @Html.DisplayFor(field => character.Alive)</p>
+}

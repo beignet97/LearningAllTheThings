@@ -9,9 +9,22 @@
 }
 
 <h2>Houses</h2>
-<ul>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Region</th>
+        <th>Words</th>
+        <th>Castle</th>
+        <th>Members</th>
+    </tr>
     @foreach (var house in Model)
     {
-        <li>@Html.DisplayFor(field => house.Name)</li>
+        <tr>
+            <td>@Html.DisplayFor(field => house.Name)</td>
+            <td>@Html.DisplayFor(field => house.Region)</td>
+            <td>@Html.DisplayFor(field => house.Words)</td>
+            <td>@Html.DisplayFor(field => house.CastleId.Name)</td>
+            <td><input type="button" onclick="alert('@house.HouseId')" value="View members"></td>
+        </tr>
     }
-</ul>
+</table>
