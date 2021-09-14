@@ -1,11 +1,26 @@
-﻿.navbar {
-    background-color: cyan;
+﻿h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar {
+    font-family: Papyrus, fantasy;
+}
+
+.navbar {
+    background-color: darkred;
+}
+
+h2 {
+    text-align: center;
 }
 
 body {
-    color: cyan;
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: lemonchiffon;
+    font-family: Georgia, serif;
 }
 
 /* Set padding to keep content from hitting the edges */
