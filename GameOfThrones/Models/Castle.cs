@@ -21,9 +21,19 @@ namespace GameOfThrones.Models
         public Castle CastleId { get; set; }
     }
 
+    public class Character
+    {
+        public int CharacterId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public bool Alive { get; set; }
+        public House HouseId { get; set; }
+    }
+
     public class CastleContext : DbContext
     {
         public DbSet<Castle> Castles { get; set; }
         public DbSet<House> Houses { get; set; }
+        public DbSet<Character> Characters { get; set; }
     }
 }
