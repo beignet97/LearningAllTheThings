@@ -24,7 +24,7 @@
             <td>@Html.DisplayFor(field => house.Region)</td>
             <td>@Html.DisplayFor(field => house.Words)</td>
             <td>@Html.DisplayFor(field => house.CastleId.Name)</td>
-            <td><input type="button" onclick="alert('@house.HouseId')" value="View members"></td>
+            <td><input type="button" onclick="@("window.location.href='" + @Url.Action("Characters", "House") + "/" + house.HouseId + "'");" value="View members"></td>
         </tr>
     }
 </table>
