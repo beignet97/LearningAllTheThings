@@ -7,7 +7,15 @@
 
 <h2>Characters</h2>
 
-@foreach (var character in Model)
+@if (Model.Count() == 0)
 {
-    <p>@Html.DisplayFor(field => character.FirstName) @Html.DisplayFor(field => character.LastName) - Alive: @Html.DisplayFor(field => character.Alive)</p>
+    <p>No characters were found, please try a different house</p>
 }
+else
+{
+    foreach (var character in Model)
+    {
+        <p>@Html.DisplayFor(field => character.FirstName) @Html.DisplayFor(field => character.LastName) - Alive: @Html.DisplayFor(field => character.Alive)</p>
+    }
+}
+

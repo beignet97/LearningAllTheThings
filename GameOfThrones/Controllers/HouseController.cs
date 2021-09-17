@@ -19,19 +19,9 @@ namespace GameOfThrones.Controllers
 
         public ActionResult Characters(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
-            }
-
             var characters = from c in db.Characters
                              where c.HouseId.HouseId == id
                              select c;
-
-            if (!characters.Any())
-            {
-                return HttpNotFound();
-            }
 
             return View(characters);
         }
