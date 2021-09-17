@@ -6,14 +6,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<GameOfThrones.Models.CastleContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<GameOfThrones.DAL.WikiContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(GameOfThrones.Models.CastleContext context)
+        protected override void Seed(GameOfThrones.DAL.WikiContext context)
         {
             context.Castles.AddOrUpdate(i => i.Name,
                 new Castle

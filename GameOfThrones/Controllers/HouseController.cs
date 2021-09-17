@@ -1,4 +1,5 @@
-﻿using GameOfThrones.Models;
+﻿using GameOfThrones.DAL;
+using GameOfThrones.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace GameOfThrones.Controllers
 {
     public class HouseController : Controller
     {
-        private CastleContext db = new CastleContext();
+        private WikiContext db = new WikiContext();
 
         // GET: House
         public ActionResult Index()

@@ -11,11 +11,4 @@ namespace GameOfThrones.Models
         public int CastleId { get; set; }
         public string Name { get; set; }
     }
-
-    public class CastleContext : DbContext
-    {
-        public DbSet<Castle> Castles { get; set; }
-        public DbSet<House> Houses { get; set; }
-        public DbSet<Character> Characters { get; set; }
-    }
 }
