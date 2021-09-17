@@ -53,7 +53,7 @@
                     Name = "Arryn",
                     Region = "The Vale of Arryn",
                     Words = "As High as Honor",
-                    CastleId = context.Castles.Find(0)
+                    CastleId = context.Castles.Find(1)
                 },
 
                 new House
@@ -61,7 +61,7 @@
                     Name = "Greyjoy",
                     Region = "Iron Islands",
                     Words = "What Is Dead May Never Die",
-                    CastleId = context.Castles.Find(1)
+                    CastleId = context.Castles.Find(2)
                 },
 
                 new House
@@ -69,7 +69,7 @@
                     Name = "Lannister",
                     Region = "The Westerlands",
                     Words = "A Lannister Always Pays His Debts",
-                    CastleId = context.Castles.Find(2)
+                    CastleId = context.Castles.Find(3)
                 },
 
                 new House
@@ -77,7 +77,7 @@
                     Name = "Stark",
                     Region = "The North",
                     Words = "Winter Is Coming",
-                    CastleId = context.Castles.Find(3)
+                    CastleId = context.Castles.Find(4)
                 },
 
                 new House
@@ -85,7 +85,7 @@
                     Name = "Targaryen",
                     Region = "The Crownlands",
                     Words = "Fire and Blood",
-                    CastleId = context.Castles.Find(4)
+                    CastleId = context.Castles.Find(6)
                 },
 
                 new House

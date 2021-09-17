@@ -21,7 +21,7 @@ namespace GameOfThrones.Models
         public string Words { get; set; }
 
         [Display(Name = "Castle")]
-        public Castle CastleId { get; set; }
+        public virtual Castle CastleId { get; set; }
     }
 
     public class Character
