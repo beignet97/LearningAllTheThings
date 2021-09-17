@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace GameOfThrones.Models
 {
@@ -18,6 +19,8 @@ namespace GameOfThrones.Models
         public string Name { get; set; }
         public string Region { get; set; }
         public string Words { get; set; }
+
+        [Display(Name = "Castle")]
         public Castle CastleId { get; set; }
     }
 

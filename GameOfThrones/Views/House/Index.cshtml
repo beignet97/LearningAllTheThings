@@ -2,19 +2,16 @@
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-@{
     ViewBag.Title = "Houses";
 }
 
 <h2>Houses</h2>
 <table class="table">
     <tr>
-        <th>Name</th>
-        <th>Region</th>
-        <th>Words</th>
-        <th>Castle</th>
+        <th>@Html.DisplayNameFor(model => model.Name)</th>
+        <th>@Html.DisplayNameFor(model => model.Region)</th>
+        <th>@Html.DisplayNameFor(model => model.Words)</th>
+        <th>@Html.DisplayNameFor(model => model.CastleId)</th>
         <th>Members</th>
     </tr>
     @foreach (var house in Model)
