@@ -147,12 +147,16 @@
     <Compile Include="Models\House.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CastleRepository.cs" />
+    <Compile Include="Repository\CharacterRepository.cs" />
     <Compile Include="Repository\HouseRepository.cs" />
     <Compile Include="Repository\Interface\ICastleRepository.cs" />
+    <Compile Include="Repository\Interface\ICharacterRepository.cs" />
     <Compile Include="Repository\Interface\IHouseRepository.cs" />
     <Compile Include="Service\CastleService.cs" />
+    <Compile Include="Service\CharacterService.cs" />
     <Compile Include="Service\HouseService.cs" />
     <Compile Include="Service\Interface\ICastleService.cs" />
+    <Compile Include="Service\Interface\ICharacterService.cs" />
     <Compile Include="Service\Interface\IHouseService.cs" />
   </ItemGroup>
   <ItemGroup>

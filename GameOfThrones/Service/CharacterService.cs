@@ -9,20 +9,20 @@ using System.Web;
 
 namespace GameOfThrones.Service
 {
-    public class HouseService : IHouseService
+    public class CharacterService : ICharacterService
     {
         private protected WikiContext _context;
-        private protected HouseRepository _repo;
+        private protected CharacterRepository _repo;
 
-        public HouseService()
+        public CharacterService()
         {
             _context = new WikiContext();
-            _repo = new HouseRepository();
+            _repo = new CharacterRepository();
         }
 
-        public List<House> GetHouses()
+        public List<Character> GetCharactersByHouse(int? houseId)
         {
-            return _repo.GetAllHouses(_context);
+            return _repo.GetCharactersByHouse(_context, houseId);
         }
     }
 }

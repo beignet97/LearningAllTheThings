@@ -12,21 +12,18 @@ namespace GameOfThrones.Controllers
     public class HouseController : Controller
     {
         private WikiContext db = new WikiContext();
-        private HouseService service = new HouseService();
+        private HouseService houseService = new HouseService();
+        private CharacterService characterService = new CharacterService();
 
         // GET: House
         public ActionResult Index()
         {
-            return View(service.GetHouses());
+            return View(houseService.GetHouses());
         }
 
         public ActionResult Characters(int? id)
         {
-            var characters = from c in db.Characters
-                             where c.HouseId.HouseId == id
-                             select c;
-
-            return View(characters);
+            return View(characterService.GetCharactersByHouse(id));
         }
     }
 }

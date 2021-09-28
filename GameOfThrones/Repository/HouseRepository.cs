@@ -14,10 +14,5 @@ namespace GameOfThrones.Repository
         {
             return context.Houses.ToList();
         }
-
-        public House GetHouseById(WikiContext context, int id)
-        {
-            return context.Houses.Find(id);
-        }
     }
 }

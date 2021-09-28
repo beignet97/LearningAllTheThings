@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace GameOfThrones.Service.Interface
 {
-    interface IHouseService
+    interface ICharacterService
     {
-        List<House> GetHouses();
+        List<Character> GetCharactersByHouse(int? houseId);
     }
 }
