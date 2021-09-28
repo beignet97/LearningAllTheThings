@@ -13,7 +13,13 @@ namespace GameOfThrones.Service
         private protected WikiContext _context;
         private protected CastleRepository _repo;
 
-        public List<Castle> GetCastles() 
+        public CastleService()
+        {
+            _context = new WikiContext();
+            _repo = new CastleRepository();
+        }
+
+        public List<Castle> GetCastles()
         {
             return _repo.GetAllCastles(_context);
         }

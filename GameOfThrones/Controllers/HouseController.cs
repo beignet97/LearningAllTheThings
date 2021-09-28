@@ -1,5 +1,6 @@
 ﻿using GameOfThrones.DAL;
 using GameOfThrones.Models;
+using GameOfThrones.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,12 @@ namespace GameOfThrones.Controllers
     public class HouseController : Controller
     {
         private WikiContext db = new WikiContext();
+        private HouseService service = new HouseService();
 
         // GET: House
         public ActionResult Index()
         {
-            return View(db.Houses.ToList());
+            return View(service.GetHouses());
         }
 
         public ActionResult Characters(int? id)

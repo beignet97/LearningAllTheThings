@@ -10,7 +10,7 @@ namespace GameOfThrones.Repository
 {
     public class CastleRepository : ICastleRepository
     {
-        public List<Castle> GetAllCastles(WikiContext context) 
+        public List<Castle> GetAllCastles(WikiContext context)
         {
             return context.Castles.ToList();
         }

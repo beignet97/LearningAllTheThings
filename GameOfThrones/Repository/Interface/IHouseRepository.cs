@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace GameOfThrones.Repository.Interface
 {
-    interface ICastleRepository
+    interface IHouseRepository
     {
-        List<Castle> GetAllCastles(WikiContext context);
+        List<House> GetAllHouses(WikiContext context);
+        House GetHouseById(WikiContext context, int id);
     }
 }
