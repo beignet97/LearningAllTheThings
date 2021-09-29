@@ -11,7 +11,6 @@ namespace GameOfThrones.Controllers
 {
     public class HouseController : Controller
     {
-        private WikiContext db = new WikiContext();
         private HouseService houseService = new HouseService();
         private CharacterService characterService = new CharacterService();
 

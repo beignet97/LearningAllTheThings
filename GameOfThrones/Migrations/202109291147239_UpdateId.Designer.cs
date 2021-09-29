@@ -7,13 +7,13 @@ namespace GameOfThrones.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AddHouse : IMigrationMetadata
+    public sealed partial class UpdateId : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddHouse));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdateId));
         
         string IMigrationMetadata.Id
         {
-            get { return "202109101513182_AddHouse"; }
+            get { return "202109291147239_UpdateId"; }
         }
         
         string IMigrationMetadata.Source

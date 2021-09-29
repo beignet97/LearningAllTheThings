@@ -13,7 +13,7 @@ namespace GameOfThrones.Repository
         public List<Character> GetCharactersByHouse(WikiContext context, int? houseId)
         {
             return (from c in context.Characters
-                    where c.HouseId.HouseId == houseId
+                    where c.HouseId == houseId
                     select c).ToList();
         }
     }

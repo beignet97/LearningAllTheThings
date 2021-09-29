@@ -11,7 +11,6 @@ namespace GameOfThrones.Controllers
 {
     public class CastleController : Controller
     {
-        // private WikiContext db = new WikiContext();
         private CastleService service = new CastleService();
 
         // GET: Castle

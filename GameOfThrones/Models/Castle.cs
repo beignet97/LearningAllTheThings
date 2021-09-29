@@ -8,7 +8,7 @@ namespace GameOfThrones.Models
 {
     public class Castle
     {
-        public int CastleId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
     }
 }

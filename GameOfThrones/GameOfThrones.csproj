@@ -133,13 +133,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109101513182_AddHouse.cs" />
-    <Compile Include="Migrations\202109101513182_AddHouse.designer.cs">
-      <DependentUpon>202109101513182_AddHouse.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202109141059199_AddCharacter.cs" />
-    <Compile Include="Migrations\202109141059199_AddCharacter.designer.cs">
-      <DependentUpon>202109141059199_AddCharacter.cs</DependentUpon>
+    <Compile Include="Migrations\202109291147239_UpdateId.cs" />
+    <Compile Include="Migrations\202109291147239_UpdateId.designer.cs">
+      <DependentUpon>202109291147239_UpdateId.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Castle.cs" />
@@ -213,11 +209,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202109101513182_AddHouse.resx">
-      <DependentUpon>202109101513182_AddHouse.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109141059199_AddCharacter.resx">
-      <DependentUpon>202109141059199_AddCharacter.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202109291147239_UpdateId.resx">
+      <DependentUpon>202109291147239_UpdateId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
